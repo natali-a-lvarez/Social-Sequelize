@@ -145,8 +145,8 @@ describe("Social Sequelzie Test", () => {
       },
     ]);
 
-    await User.setLikes(likes);
-    const associatedLikes = await User.getLikes();
+    await user.addLike(likes);
+    const associatedLikes = await user.getLikes();
 
     expect(associatedLikes).toBeTruthy();
   });
@@ -168,8 +168,8 @@ describe("Social Sequelzie Test", () => {
       createdAt: "12/24/2008",
     });
 
-    await Like.setUser(users);
-    const associatedUsers = await Like.getUsers();
+    await like.addUser(users);
+    const associatedUsers = await like.getUsers();
 
     expect(associatedUsers).toBeTruthy();
   });
